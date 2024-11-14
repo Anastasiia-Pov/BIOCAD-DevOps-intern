@@ -35,11 +35,11 @@ docker push anastasiiapovolotskaia/biocad_intern_devops-web:v1
 
 - cоздание деплоймента и проверка запуска первой реплики. 
     
-<img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/5.1%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B5%D0%BF%D0%BB%D0%BE%D0%B9%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%20%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D0%B5%D0%B3%D0%BE%20%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0.%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%201%20%D1%80%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B8.png width=750 />
+<img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/5.1%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20deployment%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%BE%D0%B4%D0%B0.png width=750 />
 
 - изменение количества подов в деплойменте, добавление второй реплики.
 
-<img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/5.2%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9%20%D1%80%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B8.png width=750 />
+<img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/5.2%20%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20deployment%20%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%BE%D0%B4%D0%B0.png width=750 />
     
 6. Создание сервиса, через который будет доступ на "поды". Тип сервиса - NodePort.
 
@@ -47,10 +47,21 @@ docker push anastasiiapovolotskaia/biocad_intern_devops-web:v1
 
 7. Запуск в minikube режима проброса портов и подключение к контейнерам через веб-браузер.
 
-- создание тунеля для работа через Docker container по адресу http://127.0.0.1:53803:
+- создание тунеля для работа через Docker container по адресу http://127.0.0.1:64588:
 
 <img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/7.1%20%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%82%D1%83%D0%BD%D0%B5%D0%BB%D1%8F%20%D0%B4%D0%BB%D1%8F%20Docker.png width=750 />
 
 - подключение к контейнерам через веб-браузер:
 
 <img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/7.2%20%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B0%D0%BC%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D1%82%D1%83%D0%BD%D0%B5%D0%BB%D1%8C.png width=750 />
+
+
+Также, дополнительно, в рамках тестового был подключен Kubernetes Dashboard для доступа к пользовательскому веб-интерфейсу Kubernetes.
+
+A. Workloads с 2 репликами приложения.
+
+<img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/Dashboard_%D1%83%D0%B2%D0%BB%D0%B8%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BB%D0%B2%D0%B0%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B2%20%D0%B4%D0%BE%20%D0%B4%D0%B2%D1%83%D1%85.png width=750 />
+
+B. Информация по Service hello-world-deploy
+
+<img src=https://github.com/Anastasiia-Pov/BIOCAD-DevOps-intern/blob/main/screenshots/Dashboard_Service_hello_world_deploy_info.png width=750 />
